@@ -1,0 +1,69 @@
+[project]
+name = "dip"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.12.5",
+]
+
+[dependency-groups]
+dev = [
+    "fastapi>=0.128.0",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "pytest-httpx>=0.36.0",
+    "ruff>=0.14.10",
+]
+
+
+# Ruff configuration for linting and formatting
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+indent-width = 4
+unsafe-fixes = false
+extend-exclude = [".venv", "tests"]
+
+
+[tool.ruff.lint]
+preview = true
+# Keep selection minimal and safe by default.
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "S",
+    "SIM",
+    "I",
+    "T20",
+    "PTH",
+    "DTZ",
+    "COM",
+    "SLF",
+    "DOC",
+    "D",
+    "TD",
+    "RSE",
+    "ASYNC"
+]
+
+ignore = [
+    "COM812",
+    "D203",
+    "D213",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["worker"]
+combine-as-imports = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = false
