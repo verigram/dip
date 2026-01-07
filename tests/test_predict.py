@@ -7,7 +7,7 @@ from httpx import Request
 from pytest_httpx import HTTPXMock
 from urllib.parse import urljoin
 
-from src.predict import RemoteModel, InvalidResponseStatusException, BatchPredictStat, BatchRetryStat, DataPointRetryStat
+from dip_ml.predict import RemoteModel, InvalidResponseStatusException, BatchPredictStat, BatchRetryStat, DataPointRetryStat
 
 
 def filter_requests(requests: List[Request], url: Optional[str]=None, method: Optional[str]=None,

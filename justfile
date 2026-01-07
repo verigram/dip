@@ -2,7 +2,7 @@
 
 
 test:
-    uv run pytest tests/
+    uv run pytest
 
 # --- Linting & Formatting with Ruff ---
 # Run static checks (no changes)

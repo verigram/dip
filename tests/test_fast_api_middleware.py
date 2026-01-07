@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from starlette.requests import Request
 
-from src.fast_api import DipMiddleware, DipMiddlewareException
+from dip_ml.fast_api import DipMiddleware, DipMiddlewareException
 
 app = FastAPI()
 
